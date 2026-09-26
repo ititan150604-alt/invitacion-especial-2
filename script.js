@@ -7,9 +7,7 @@ function cambiarPantalla(id) {
     document
         .querySelectorAll(".pantalla")
         .forEach(pantalla => {
-
             pantalla.classList.remove("activa");
-
         });
 
     document
@@ -31,9 +29,7 @@ const estado =
 const comenzar =
     document.getElementById("comenzar");
 
-
 let porcentaje = 0;
-
 
 const carga = setInterval(() => {
 
@@ -42,35 +38,27 @@ const carga = setInterval(() => {
     progreso.style.width =
         porcentaje + "%";
 
-
     if (porcentaje < 30) {
 
         estado.textContent =
             "Preparando información...";
 
-    }
-
-    else if (porcentaje < 60) {
+    } else if (porcentaje < 60) {
 
         estado.textContent =
             "Analizando información...";
 
-    }
-
-    else if (porcentaje < 90) {
+    } else if (porcentaje < 90) {
 
         estado.textContent =
             "Verificando datos...";
 
-    }
-
-    else {
+    } else {
 
         estado.textContent =
             "Acceso autorizado.";
 
     }
-
 
     if (porcentaje >= 100) {
 
@@ -112,7 +100,7 @@ document
 
 
 /* =========================
-   PISTA
+   PISTAS
 ========================= */
 
 let pistaActual = 1;
@@ -122,10 +110,14 @@ document
     .addEventListener("click", () => {
 
         const mensaje =
-            document.getElementById("mensaje-pista");
+            document.getElementById(
+                "mensaje-pista"
+            );
 
         const boton =
-            document.getElementById("pista1");
+            document.getElementById(
+                "pista1"
+            );
 
         if (pistaActual === 1) {
 
@@ -156,10 +148,13 @@ document
             mensaje.textContent =
                 "Pista 03: Dicen que las oportunidades llegan una vez... así que esta vez no quiero dejar pasar la nuestra.";
 
-            boton.style.display = "none";
+            boton.style.display =
+                "none";
 
             document
-                .getElementById("continuar-pistas")
+                .getElementById(
+                    "continuar-pistas"
+                )
                 .classList.remove("oculto");
 
         }
@@ -221,20 +216,26 @@ document
     .addEventListener("click", () => {
 
         const boton =
-            document.getElementById("desbloquear");
+            document.getElementById(
+                "desbloquear"
+            );
 
-        boton.style.display = "none";
+        boton.style.display =
+            "none";
 
         const mensaje =
             document.createElement("p");
 
-        mensaje.className = "mensaje-coordenadas";
+        mensaje.className =
+            "mensaje-coordenadas";
 
         mensaje.textContent =
             "LOCALIZANDO DESTINO...";
 
         document
-            .querySelector("#pantalla-destino .contenido")
+            .querySelector(
+                "#pantalla-destino .contenido"
+            )
             .appendChild(mensaje);
 
         setTimeout(() => {

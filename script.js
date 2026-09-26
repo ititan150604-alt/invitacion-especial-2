@@ -125,7 +125,7 @@ document
             );
 
         mensaje.textContent =
-            "Primera pista desbloqueada... Hay una persona que quería preguntarte algo.";
+             "Pista 01: Existe un lugar al que alguna vez quisimos ir... pero el tiempo nunca estuvo de nuestro lado.";
 
         document
             .getElementById("pista1")

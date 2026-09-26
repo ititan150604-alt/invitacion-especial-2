@@ -220,8 +220,45 @@ document
     .getElementById("desbloquear")
     .addEventListener("click", () => {
 
-        cambiarPantalla(
-            "pantalla-final"
-        );
+        const boton =
+            document.getElementById("desbloquear");
+
+        boton.style.display = "none";
+
+        const mensaje =
+            document.createElement("p");
+
+        mensaje.className = "mensaje-coordenadas";
+
+        mensaje.textContent =
+            "LOCALIZANDO DESTINO...";
+
+        document
+            .querySelector("#pantalla-destino .contenido")
+            .appendChild(mensaje);
+
+        setTimeout(() => {
+
+            mensaje.textContent =
+                "COORDENADAS ENCONTRADAS.";
+
+        }, 1500);
+
+        setTimeout(() => {
+
+            mensaje.textContent =
+                "DESTINO CONFIRMADO.";
+
+        }, 3000);
+
+        setTimeout(() => {
+
+            cambiarPantalla(
+                "pantalla-final"
+            );
+
+        }, 4500);
+
+    });
 
     });

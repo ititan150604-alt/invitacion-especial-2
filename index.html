@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Una sorpresa</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main id="app">
+
+        <!-- PANTALLA INICIAL -->
+        <section id="pantalla-inicio" class="pantalla activa">
+
+            <div class="terminal">
+
+                <p class="texto-sistema">
+                    SISTEMA INICIANDO...
+                </p>
+
+                <div class="barra">
+                    <div id="progreso"></div>
+                </div>
+
+                <p id="estado">
+                    Preparando información...
+                </p>
+
+                <button id="comenzar" class="oculto">
+                    COMENZAR
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- IDENTIFICACIÓN -->
+        <section id="pantalla-identificacion" class="pantalla">
+
+            <div class="contenido">
+
+                <p class="etiqueta">
+                    INFORMACIÓN ENCONTRADA
+                </p>
+
+                <h1>
+                    Persona seleccionada
+                </h1>
+
+                <p id="nombre">
+                    [SU NOMBRE]
+                </p>
+
+                <p class="descripcion">
+                    Se ha detectado una persona
+                    bastante importante.
+                </p>
+
+                <button id="continuar">
+                    CONTINUAR
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PISTAS -->
+        <section id="pantalla-pistas" class="pantalla">
+
+            <div class="contenido">
+
+                <p class="etiqueta">
+                    ARCHIVO PERSONAL
+                </p>
+
+                <h1>
+                    Hay algo que debes descubrir...
+                </h1>
+
+                <p>
+                    Antes de llegar a la pregunta,
+                    tendrás que encontrar algunas pistas.
+                </p>
+
+                <button id="pista1">
+                    DESCUBRIR PISTA
+                </button>
+
+                <p id="mensaje-pista"></p>
+
+                <button id="continuar-pistas" class="oculto">
+                    SIGUIENTE
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- PREGUNTA -->
+        <section id="pantalla-pregunta" class="pantalla">
+
+            <div class="contenido">
+
+                <p class="etiqueta">
+                    ÚLTIMA ETAPA
+                </p>
+
+                <h1>
+                    Llegaste hasta aquí.
+                </h1>
+
+                <p class="pregunta">
+                    Así que ahora sí...
+                </p>
+
+                <h2>
+                    ¿Quieres salir conmigo?
+                </h2>
+
+                <div class="botones">
+
+                    <button id="si">
+                        SÍ ❤️
+                    </button>
+
+                    <button id="tambien">
+                        OBVIAMENTE
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DESTINO -->
+        <section id="pantalla-destino" class="pantalla">
+
+            <div class="contenido">
+
+                <p class="etiqueta">
+                    ACCESO AUTORIZADO
+                </p>
+
+                <h1>
+                    Misión aceptada.
+                </h1>
+
+                <p>
+                    Has desbloqueado el destino.
+                </p>
+
+                <button id="desbloquear">
+                    DESBLOQUEAR DESTINO
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINAL -->
+        <section id="pantalla-final" class="pantalla">
+
+            <div class="contenido">
+
+                <p class="etiqueta">
+                    DESTINO DESBLOQUEADO
+                </p>
+
+                <h1>
+                    📍 Nuestra cita
+                </h1>
+
+                <div class="datos-cita">
+
+                    <p>
+                        <strong>Lugar</strong>
+                    </p>
+
+                    <p>
+                        [NOMBRE DEL LUGAR]
+                    </p>
+
+                    <p>
+                        <strong>Fecha</strong>
+                    </p>
+
+                    <p>
+                        [FECHA]
+                    </p>
+
+                    <p>
+                        <strong>Hora</strong>
+                    </p>
+
+                    <p>
+                        [HORA]
+                    </p>
+
+                </div>
+
+                <p class="final">
+                    Te veo ahí. ❤️
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

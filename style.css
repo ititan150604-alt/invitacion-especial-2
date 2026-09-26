@@ -255,3 +255,20 @@ button:hover {
     color: black;
     transform: translateY(-3px);
 }
+.mensaje-coordenadas {
+    margin-top: 30px;
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #aaa;
+    animation: parpadeo 0.8s infinite alternate;
+}
+
+@keyframes parpadeo {
+    from {
+        opacity: 0.35;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

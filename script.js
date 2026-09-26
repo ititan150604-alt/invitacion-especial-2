@@ -115,25 +115,54 @@ document
    PISTA
 ========================= */
 
+let pistaActual = 1;
+
 document
     .getElementById("pista1")
     .addEventListener("click", () => {
 
         const mensaje =
-            document.getElementById(
-                "mensaje-pista"
-            );
+            document.getElementById("mensaje-pista");
 
-        mensaje.textContent =
-             "Pista 01: Existe un lugar al que alguna vez quisimos ir... pero el tiempo nunca estuvo de nuestro lado.";
+        const boton =
+            document.getElementById("pista1");
 
-        document
-            .getElementById("pista1")
-            .style.display = "none";
+        if (pistaActual === 1) {
 
-        document
-            .getElementById("continuar-pistas")
-            .classList.remove("oculto");
+            mensaje.textContent =
+                "Pista 01: Existe un lugar al que alguna vez quisimos ir... pero el tiempo nunca estuvo de nuestro lado.";
+
+            pistaActual = 2;
+
+            boton.textContent =
+                "DESCUBRIR PISTA 02";
+
+        }
+
+        else if (pistaActual === 2) {
+
+            mensaje.textContent =
+                "Pista 02: Nosotros le pusimos un nombre a ese lugar... y probablemente sabes exactamente cuál es.";
+
+            pistaActual = 3;
+
+            boton.textContent =
+                "DESCUBRIR PISTA 03";
+
+        }
+
+        else if (pistaActual === 3) {
+
+            mensaje.textContent =
+                "Pista 03: Dicen que las oportunidades llegan una vez... así que esta vez no quiero dejar pasar la nuestra.";
+
+            boton.style.display = "none";
+
+            document
+                .getElementById("continuar-pistas")
+                .classList.remove("oculto");
+
+        }
 
     });
 
